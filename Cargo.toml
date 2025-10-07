@@ -1,0 +1,28 @@
+[package]
+name = "aephylia-host"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+chrono = "0.4.42"
+clap = { version = "4.5.48", features = ["derive"] }
+colored = "3.0.0"
+lazy_static = "1.5.0"
+sysinfo = "0.37.2"
+tokio = { version = "1.47.1", features = ["full"] }
+windows = { version = "0.62.1", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_Memory",
+    "Win32_System_LibraryLoader",
+    "Win32_Security",
+    "Win32_System_Diagnostics_Debug",
+] }
+
+[build-dependencies]
+embed-resource = "3.0"
+
+
+
